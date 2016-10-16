@@ -7,6 +7,10 @@ describe('DOM Rendering', function () {
   it('Click the delete button, the Todo item should be deleted', function () {
     const app = TestUtils.renderIntoDocument(<App/>);
     let todoItems = TestUtils.scryRenderedDOMComponentsWithTag(app, 'li');
+
+    let todoText = todoItems[0].querySelector('span');
+    expect(todoText.innerHTML).to.equal("Todo one");
+
     let todoLength = todoItems.length;
     let deleteButton = todoItems[0].querySelector('button');
     TestUtils.Simulate.click(deleteButton);

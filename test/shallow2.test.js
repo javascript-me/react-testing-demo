@@ -13,6 +13,9 @@ describe('Shallow Rendering', function () {
   it('Todo item should not have todo-done class', function () {
     const todoItemData = { id: 0, name: 'Todo one', done: false };
     const todoItem = shallowRender(TodoItem, {todo: todoItemData});
+
+    console.log("----->" + JSON.stringify(todoItem.props, null, 4));
+
     expect(todoItem.props.children[0].props.className.indexOf('todo-done')).to.equal(-1);
   });
 });

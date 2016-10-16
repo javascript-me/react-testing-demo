@@ -13,6 +13,9 @@ describe('Shallow Rendering', function () {
   it('App\'s title should be Todos', function () {
     const app = shallowRender(App);
     // component's shallow rendering has props.children
+
+    console.log("----->" + JSON.stringify(app.props, null, 4));
+
     expect(app.props.children[0].type).to.equal('h1');
     expect(app.props.children[0].props.children).to.equal('Todos');
   });
