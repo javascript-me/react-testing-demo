@@ -1,6 +1,5 @@
 import React from 'react';
 import {findDOMNode} from 'react-dom';
-import jsdom from 'jsdom';
 import {expect} from 'chai';
 import TestUtils from 'react-addons-test-utils';
 import App from '../app/components/App';
