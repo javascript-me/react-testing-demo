@@ -12,6 +12,9 @@ describe('DOM Rendering', function (done) {
     let addInput = appDOM.querySelector('input');
     addInput.value = 'Todo four';
     let addButton = appDOM.querySelector('.add-todo button');
+
+    expect(addButton.innerHTML).to.be.equal("Add Todo");
+
     TestUtils.Simulate.click(addButton);
     expect(appDOM.querySelectorAll('.todo-text').length).to.be.equal(todoItemsLength + 1);
   });
